@@ -18,7 +18,7 @@ public class RoomDimensionsTests
         double ouputtedArea = calculator.CalculateFloorArea(width, length); 
 
         //Assert
-        Assert.Equal(ouputtedArea, expectedFloorArea);
+        Assert.Equal(expectedFloorArea, ouputtedArea);
     }
 
     [Fact]
@@ -27,13 +27,13 @@ public class RoomDimensionsTests
         //Assign
         double floorArea = 100.0;
         double height = 40.0;
-        double expectedRoomVolume = 400.0;
+        double expectedRoomVolume = 4000.0;
 
         //Act
         double ouputtedVolume = calculator.CalculateRoomVolume(floorArea, height); 
 
         //Assert
-        Assert.Equal(ouputtedVolume, expectedRoomVolume);
+        Assert.Equal(expectedRoomVolume, ouputtedVolume);
     }
 
     [Fact]
@@ -43,14 +43,15 @@ public class RoomDimensionsTests
         bool ceilingIncluded = false;
         double width = 20.0;
         double length = 15.0;
+        double floorArea = 300.0;
         double height = 40.0;
         double expectedPaintNeeded = 3100.0;
 
         //Act
-        double ouputtedVolume = calculator.CalculatePaintNeeded(width, length, height, ceilingIncluded);  
+        double ouputtedVolume = calculator.CalculatePaintNeeded(floorArea, width, length, height, ceilingIncluded);  
 
         //Assert
-        Assert.Equal(ouputtedVolume, expectedPaintNeeded);
+        Assert.Equal(expectedPaintNeeded, ouputtedVolume);
     }
 
     [Fact]
@@ -60,13 +61,14 @@ public class RoomDimensionsTests
         bool ceilingIncluded = false;
         double width = 20.0;
         double length = 15.0;
+        double floorArea = 300.0;
         double height = 40.0;
         double expectedPaintNeeded = 2800.0;
 
         //Act
-        double ouputtedVolume = calculator.CalculatePaintNeeded(width, length, height, ceilingIncluded); 
+        double ouputtedVolume = calculator.CalculatePaintNeeded(floorArea, width, length, height, ceilingIncluded); 
 
         //Assert
-        Assert.Equal(ouputtedVolume, expectedPaintNeeded);
+        Assert.Equal(expectedPaintNeeded, ouputtedVolume);
     }
 }
