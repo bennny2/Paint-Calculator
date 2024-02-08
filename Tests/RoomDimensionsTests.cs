@@ -40,7 +40,7 @@ public class RoomDimensionsTests
     public void CalculatorTests_CalculatePaintNeededWithValidInputCeilingIncluded_ReturnExpected() {
 
         //Assign
-        bool ceilingIncluded = false;
+        bool ceilingIncluded = true;
         double width = 20.0;
         double length = 15.0;
         double floorArea = 300.0;

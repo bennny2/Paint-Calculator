@@ -12,6 +12,7 @@ public class RoomDimensions
 
     public double CalculatePaintNeeded(double floorArea, double roomWidth, double roomLength, double roomHeight, bool ceilingIncluded) {
 
+        //Equation to find the surface area of a cuboid
         double paintNeeded = 2 * ((roomWidth * roomLength) + (roomWidth * roomHeight) + (roomLength * roomHeight));
 
         //Remove one floorArea worth as the floor likely wont be painted
@@ -21,6 +22,7 @@ public class RoomDimensions
         if (!ceilingIncluded) {
             paintNeeded -= floorArea;
         }
+        
         return paintNeeded;
     }
 }
