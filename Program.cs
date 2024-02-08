@@ -47,7 +47,7 @@ double.TryParse(roomHeightInput, out roomHeight);
 validLength = false;
 while (validLength == false)
 {
-    Console.WriteLine("Please enter the width of the room: ");
+    Console.WriteLine("Please enter the length of the room: ");
     roomLengthInput = Console.ReadLine();
     validLength = calculator.ValidateUserInput(roomLengthInput);
 }
@@ -62,11 +62,11 @@ while (validCeiling == false)
     if (string.IsNullOrWhiteSpace(ceilingInput)) {
         Console.WriteLine("We didn't recieve an input, please try again ");
 
-    } else if (ceilingInput == "Y") {
+    } else if (ceilingInput == "Y" || ceilingInput == "y") {
         ceilingIncluded = true;
         validCeiling = true;
 
-    } else if (ceilingInput == "N") {
+    } else if (ceilingInput == "N" || ceilingInput == "n") {
         ceilingIncluded = false;
         validCeiling = true;
 
