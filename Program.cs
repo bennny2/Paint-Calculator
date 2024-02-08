@@ -8,7 +8,7 @@ bool validCeiling;
 string? roomWidthInput = "";
 string? roomHeightInput = "";
 string? roomLengthInput = "";
-string? ceilingInput = "";
+string? ceilingInput;
 
 double roomWidth;
 double roomHeight;
@@ -41,7 +41,7 @@ while (validHeight == false)
     roomHeightInput = Console.ReadLine();
     validHeight = calculator.ValidateUserInput(roomHeightInput);
 }
-double.TryParse(roomWidthInput, out roomHeight);
+double.TryParse(roomHeightInput, out roomHeight);
 
 //Ensure valid input
 validLength = false;
@@ -51,7 +51,7 @@ while (validLength == false)
     roomLengthInput = Console.ReadLine();
     validLength = calculator.ValidateUserInput(roomLengthInput);
 }
-double.TryParse(roomWidthInput, out roomLength);
+double.TryParse(roomLengthInput, out roomLength);
 
 //Ensure valid input
 validCeiling = false;

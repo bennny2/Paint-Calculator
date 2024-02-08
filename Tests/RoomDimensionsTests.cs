@@ -1,3 +1,4 @@
+using System.Formats.Tar;
 using Xunit;
 
 namespace RoomDimensionsCalculator.Tests;
@@ -85,11 +86,13 @@ public class RoomDimensionsTests
         Assert.True(validInput);
     }
 
-    [Fact]
-    public void InputTests_ValidateUserInput_InvalidInput() {
-
-        //Assign
-        string input = "ten";
+    [Theory]
+    [InlineData("ten")]
+    [InlineData("")]
+    [InlineData(" ")]
+    [InlineData("@(&^)")]
+    [InlineData("ten10")]
+    public void InputTests_ValidateUserInput_InvalidInput(string input) {
 
         //Act
         bool validInput = calculator.ValidateUserInput(input);
