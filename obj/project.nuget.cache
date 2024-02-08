@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "WALEkcsG66d6JtCpkEkx59ubfM5s4OJtd1M3nVnCkHAfGwUR1RWk4xSIp0ZBNClHygGV7N8HzZMHyhk/ZqCPJQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\benhu\\RoomDimensionsCalculator\\RoomDimensionsCalculator.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\benhu\\.nuget\\packages\\xunit\\2.6.6\\xunit.2.6.6.nupkg.sha512",
+    "C:\\Users\\benhu\\.nuget\\packages\\xunit.abstractions\\2.0.3\\xunit.abstractions.2.0.3.nupkg.sha512",
+    "C:\\Users\\benhu\\.nuget\\packages\\xunit.analyzers\\1.10.0\\xunit.analyzers.1.10.0.nupkg.sha512",
+    "C:\\Users\\benhu\\.nuget\\packages\\xunit.assert\\2.6.6\\xunit.assert.2.6.6.nupkg.sha512",
+    "C:\\Users\\benhu\\.nuget\\packages\\xunit.core\\2.6.6\\xunit.core.2.6.6.nupkg.sha512",
+    "C:\\Users\\benhu\\.nuget\\packages\\xunit.extensibility.core\\2.6.6\\xunit.extensibility.core.2.6.6.nupkg.sha512",
+    "C:\\Users\\benhu\\.nuget\\packages\\xunit.extensibility.execution\\2.6.6\\xunit.extensibility.execution.2.6.6.nupkg.sha512",
+    "C:\\Users\\benhu\\.nuget\\packages\\xunit.runner.visualstudio\\2.5.6\\xunit.runner.visualstudio.2.5.6.nupkg.sha512"
+  ],
+  "logs": []
+}
