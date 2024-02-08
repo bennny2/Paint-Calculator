@@ -3,10 +3,12 @@ RoomDimensions calculator = new();
 bool validWidth;
 bool validHeight;
 bool validLength;
+bool validCeiling;
 
 string? roomWidthInput = "";
 string? roomHeightInput = "";
 string? roomLengthInput = "";
+string? ceilingInput = "";
 
 double roomWidth;
 double roomHeight;
@@ -51,5 +53,23 @@ while (validLength == false)
 }
 double.TryParse(roomWidthInput, out roomLength);
 
+//Ensure valid input
+validCeiling = false;
+while (validCeiling == false)
+{
+    Console.WriteLine("Do you want the ceiling painted? (Y/N) ");
+    ceilingInput = Console.ReadLine();
+    if (string.IsNullOrWhiteSpace(ceilingInput)) {
+        Console.WriteLine("We didn't recieve an input, please try again ");
 
+    } else if (ceilingInput == "Y") {
+        ceilingIncluded = true;
+
+    } else if (ceilingInput == "N") {
+        ceilingIncluded = false;
+
+    } else {
+        Console.WriteLine("Invalid input, please only input 'Y' or 'N' ");
+    }
+}
 }
