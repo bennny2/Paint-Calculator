@@ -1,5 +1,3 @@
-using System.Runtime.InteropServices;
-
 public class RoomDimensions
 {
     //Methods
