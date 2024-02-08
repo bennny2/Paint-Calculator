@@ -84,4 +84,17 @@ public class RoomDimensionsTests
         //Assert
         Assert.True(validInput);
     }
+
+    [Fact]
+    public void InputTests_ValidateUserInput_InvalidInput() {
+
+        //Assign
+        string input = "ten";
+
+        //Act
+        bool validInput = calculator.ValidateUserInput(input);
+
+        //Assert
+        Assert.False(validInput);
+    }
 }
