@@ -9,4 +9,18 @@ public class RoomDimensions
     public double CalculateRoomVolume(double floorArea, double roomHeight) {
         return floorArea * roomHeight;
     }
+
+    public double CalculatePaintNeeded(double floorArea, double roomWidth, double roomLength, double roomHeight, bool ceilingIncluded) {
+
+        double paintNeeded = 2 * ((roomWidth * roomLength) + (roomWidth * roomHeight) + (roomLength * roomHeight));
+
+        //Remove one floorArea worth as the floor likely wont be painted
+        paintNeeded -= floorArea;
+
+        //Check whether the Ceiling is being painted
+        if (!ceilingIncluded) {
+            paintNeeded -= floorArea;
+        }
+        return paintNeeded;
+    }
 }
