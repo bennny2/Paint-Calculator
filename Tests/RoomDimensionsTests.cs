@@ -4,6 +4,8 @@ namespace RoomDimensionsCalculator.Tests;
 
 public class RoomDimensionsTests
 {
+    RoomDimensions calculator = new();
+
     [Fact]
     public void CalculatorTests_CalculateFloorAreaWithValidInput_ReturnExpected() {
 
@@ -11,7 +13,6 @@ public class RoomDimensionsTests
         double width = 10.0;
         double length = 18.0;
         double expectedFloorArea = 180.0;
-        RoomDimensions calculator = new();
 
         //Act
         double ouputtedArea = calculator.CalculateFloorArea(width, length); 
@@ -27,12 +28,45 @@ public class RoomDimensionsTests
         double floorArea = 100.0;
         double height = 40.0;
         double expectedRoomVolume = 400.0;
-        RoomDimensions calculator = new();
 
         //Act
         double ouputtedVolume = calculator.CalculateRoomVolume(floorArea, height); 
 
         //Assert
         Assert.Equal(ouputtedVolume, expectedRoomVolume);
+    }
+
+    [Fact]
+    public void CalculatorTests_CalculatePaintNeededWithValidInputCeilingIncluded_ReturnExpected() {
+
+        //Assign
+        bool ceilingIncluded = false;
+        double width = 20.0;
+        double length = 15.0;
+        double height = 40.0;
+        double expectedPaintNeeded = 3100.0;
+
+        //Act
+        double ouputtedVolume = calculator.CalculatePaintNeeded(width, length, height, ceilingIncluded);  
+
+        //Assert
+        Assert.Equal(ouputtedVolume, expectedPaintNeeded);
+    }
+
+    [Fact]
+    public void CalculatorTests_CalculatePaintNeededWithValidInputCeilingNotIncluded_ReturnExpected() {
+
+        //Assign
+        bool ceilingIncluded = false;
+        double width = 20.0;
+        double length = 15.0;
+        double height = 40.0;
+        double expectedPaintNeeded = 2800.0;
+
+        //Act
+        double ouputtedVolume = calculator.CalculatePaintNeeded(width, length, height, ceilingIncluded); 
+
+        //Assert
+        Assert.Equal(ouputtedVolume, expectedPaintNeeded);
     }
 }
