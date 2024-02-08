@@ -19,4 +19,20 @@ public class RoomDimensionsTests
         //Assert
         Assert.Equal(ouputtedArea, expectedFloorArea);
     }
+
+    [Fact]
+    public void CalculatorTests_CalculateRoomVolumeWithValidInput_ReturnExpected() {
+
+        //Assign
+        double floorArea = 100.0;
+        double height = 40.0;
+        double expectedRoomVolume = 400.0;
+        RoomDimensions calculator = new();
+
+        //Act
+        double ouputtedVolume = calculator.CalculateRoomVolume(floorArea, height); 
+
+        //Assert
+        Assert.Equal(ouputtedVolume, expectedRoomVolume);
+    }
 }
