@@ -81,6 +81,6 @@ paintNeeded = calculator.CalculatePaintNeeded(floorArea, roomWidth, roomLength, 
 roomVolume = calculator.CalculateRoomVolume(floorArea, roomHeight);
 
 Console.WriteLine("The area of the floor of this room in units squared is: " + floorArea);
-Console.WriteLine("The amount of paint needed: " + paintNeeded);
+Console.WriteLine("The surface area to be painted in units squared is: " + paintNeeded);
 Console.WriteLine("The volume of this room in units cubed is: " + roomVolume);
 }
