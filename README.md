@@ -1,7 +1,15 @@
 This is my submission for the Telecetera Software Challenge - Paint Calculator
 Built with Visual Studio Code using C# and .NET 7
 
-Instructions:
+Note - Even though the commit history shows the initial commit was made 6 hours before the final commit,
+I ran a timer while working and spent just under 4 hours on this project. The discrepancy comes from me working
+in chunks during the afternoon inbetween prior arrangements and wanting to get this finished before the weekend!
+
+Instructions to run:
+- Download the Zip form the green Code button
+- Unzip the downloaded file
+- Navigate to bin/Release/net7.0/RoomDimensionsCalculator.exe
+- Run the .exe
 
 Assumptions:
 1. Assuming the user uses a consistent unit (eg. Metres) when inputting data
@@ -14,5 +22,7 @@ Assumptions:
 Improvements to be made (given more time or people):
 1. Could add a more accurate reprensentation of paint needed from calculated surface area factoring in coverage capacity and amount of coats
 2. Could add functionality for other shapes of rooms (could be done by asking for amoount of walls and each of their measurements)
-3. Could use a visual aid to represent room size to double check room sizes inputted make sense, could also make visual representation modifiable
+3. Could use a visual aid to represent room size to double check room sizes inputted make sense, could also make visual representation modifiable by the user and allow them to
+  enter data through dragging walls/corners/windows etc
 4. Should use a GUI and friendlier user experience
+5. Should be easier to download and run
