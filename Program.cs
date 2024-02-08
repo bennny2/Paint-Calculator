@@ -13,7 +13,7 @@ string? ceilingInput = "";
 double roomWidth;
 double roomHeight;
 double roomLength;
-bool ceilingIncluded;
+bool ceilingIncluded = true;
 
 double floorArea;
 double roomVolume;
@@ -64,12 +64,23 @@ while (validCeiling == false)
 
     } else if (ceilingInput == "Y") {
         ceilingIncluded = true;
+        validCeiling = true;
 
     } else if (ceilingInput == "N") {
         ceilingIncluded = false;
+        validCeiling = true;
 
     } else {
         Console.WriteLine("Invalid input, please only input 'Y' or 'N' ");
     }
 }
+
+//Complete calculations needed for outputs using calculator instance of RoomDimensions Class
+floorArea = calculator.CalculateFloorArea(roomWidth, roomLength);
+paintNeeded = calculator.CalculatePaintNeeded(floorArea, roomWidth, roomLength, roomHeight, ceilingIncluded);
+roomVolume = calculator.CalculateRoomVolume(floorArea, roomHeight);
+
+Console.WriteLine("The area of the floor of this room in units squared is: " + floorArea);
+Console.WriteLine("The amount of paint needed: " + paintNeeded);
+Console.WriteLine("The volume of this room in units cubed is: " + roomVolume);
 }
